@@ -5,10 +5,12 @@ import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Box
+import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.shape.CircleShape
+import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
@@ -130,5 +132,25 @@ fun GreetingPreview() {
 //            Text(text = "bbbb", modifier = Modifier.padding(150.dp).background(Color.Red))
 //        }
 //    }
+//
+//    MyMVPJCTheme {
+//        Surface(    // Растягивает первого потомка до собственных размеров
+//            modifier = Modifier
+//                .size(200.dp)
+//        ) {
+//            Column(
+//                modifier = Modifier
+//                    .size(50.dp)    // Это будет проигнорировано
+//                    .background(Color.Red, RoundedCornerShape(8.dp))
+//            ) {
+//                Box(
+//                    modifier = Modifier
+//                        .size(50.dp)
+//                        .background(Color.Green, RoundedCornerShape(8.dp))
+//                )
+//            }
+//        }
+//    }
+//
 
 }
