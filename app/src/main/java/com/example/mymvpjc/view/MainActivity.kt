@@ -3,17 +3,12 @@ package com.example.mymvpjc.view
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
-import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.fillMaxSize
-import androidx.compose.foundation.layout.padding
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Surface
-import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.tooling.preview.Preview
-import androidx.compose.ui.unit.dp
 import com.example.mymvpjc.appComponent
 import com.example.mymvpjc.presenter.Presenter
 import com.example.mymvpjc.ui.theme.MyMVPJCTheme
@@ -63,99 +58,17 @@ class MainActivity : ComponentActivity(), Viewable {
 fun ThisScreen() {
     MyMVPJCTheme {
         Surface(
-            modifier = Modifier.fillMaxSize(),
-            color = MaterialTheme.colorScheme.background
+            color = MaterialTheme.colorScheme.background,
+            modifier = Modifier
+                .fillMaxSize()
         ) {
-            Text(
-                text = "Hello!",
-                color = Color.Magenta,
-                modifier = Modifier
-                    .padding(25.dp)
-                    .background(Color.Gray)
-                    .padding(25.dp)
-            )
+
         }
     }
 }
 
-//@Composable
-//fun Greeting(name: String, modifier: Modifier = Modifier) {
-//    Text(
-//        text = "Hello $name!",
-//        modifier = modifier,
-//    )
-//}
-
-@Preview(showBackground = true)
+@Preview (showBackground = true)
 @Composable
-fun GreetingPreview() {
-//    MyMVPJCTheme {
-//        Surface (
-//            modifier = Modifier.fillMaxSize(),
-//            color = MaterialTheme.colorScheme.background
-//        ) {
-//            Greeting(
-//                name = "Android",
-//                modifier = Modifier
-//                    .padding(32.dp)
-//                    //.background(color = Color.Green, shape = CircleShape)
-//            )
-//        }
-//    }
-//
-//    MyMVPJCTheme {
-//        Greeting(
-//            name = "Android",
-//            modifier = Modifier.padding(32.dp)
-//                .fillMaxSize()
-//                .background(color = Color.Green, shape = CircleShape)
-//        )
-//    }
-//
-//    Box(modifier = Modifier
-//        .background(Color.Red)
-//        .size(200.dp)
-//        .padding(32.dp)
-//        .background(Color.Green)
-//        .padding(32.dp)
-//        .background(Color.Blue)
-//    )
-//
-//    MyMVPJCTheme {
-////        Surface (
-////            modifier = Modifier.fillMaxSize(),
-////            color = MaterialTheme.colorScheme.background
-////        ) {
-////            Text(text = "aaaa", modifier = Modifier.padding(20.dp).background(Color.Blue))
-////            Text(text = "bbbb", modifier = Modifier.padding(150.dp).background(Color.Red))
-////        }
-//
-//        Box (
-//            modifier = Modifier.fillMaxSize()
-//        ) {
-//            Text(text = "aaaa", modifier = Modifier.padding(20.dp).background(Color.Blue))
-//            Text(text = "bbbb", modifier = Modifier.padding(150.dp).background(Color.Red))
-//        }
-//    }
-//
-//    MyMVPJCTheme {
-//        Surface(    // Растягивает первого потомка до собственных размеров
-//            modifier = Modifier
-//                .size(200.dp)
-//        ) {
-//            Column(
-//                modifier = Modifier
-//                    .size(50.dp)    // Это будет проигнорировано
-//                    .background(Color.Red, RoundedCornerShape(8.dp))
-//            ) {
-//                Box(
-//                    modifier = Modifier
-//                        .size(50.dp)
-//                        .background(Color.Green, RoundedCornerShape(8.dp))
-//                )
-//            }
-//        }
-//    }
-//
+fun ThisScreenPreview() {
     ThisScreen()
 }
