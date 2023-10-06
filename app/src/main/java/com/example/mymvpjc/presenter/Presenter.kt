@@ -1,6 +1,5 @@
 package com.example.mymvpjc.presenter
 
-import com.example.mymvpjc.R
 import com.example.mymvpjc.model.Model
 import com.example.mymvpjc.view.Viewable
 import io.reactivex.rxjava3.android.schedulers.AndroidSchedulers
@@ -33,12 +32,13 @@ class Presenter (private val model: Model)
         ledStatusWaiting = true
         disposeBag.add(
             model.setLedStatus(!ledStatus)
+                .observeOn(AndroidSchedulers.mainThread())
                 .subscribe(
                     {
-                        view!!.makeToast(R.string.publish_done.toString())
+                        view!!.makeToast(true)
                     },
                     {
-                        view!!.makeToast(R.string.publish_error.toString())
+                        view!!.makeToast(false)
                         view!!.changeSwitchEnabled(true)
                         ledStatusWaiting = false
                     }
